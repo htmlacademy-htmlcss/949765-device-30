@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Олег Васин](https://up.htmlacademy.ru/htmlcss/30/user/949765).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий (sench) Железцов](https://htmlacademy.ru/profile/sench).
 
 ---
 
