@@ -1,12 +1,5 @@
-.container {
-  max-width: 1160px;
-  height: 100vh;
-  border: 1px solid red;
-  margin: 0 auto;
-}
 .visually-hidden {
   position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0 !important;
   border: 0 !important;
@@ -20,4 +13,10 @@
 }
 .logotypes img:hover {
   filter: none;
+}
+.footer__icon:hover {
+  filter: opacity(60%);
+}
+.footer__icon:active {
+  filter: opacity(30%);
 }
