@@ -1,0 +1,22 @@
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.logotypes img {
+  filter: saturate(0%) opacity(50%);
+  transition: 0.3s ease;
+}
+.logotypes img:hover {
+  filter: none;
+}
+.footer__icon:hover {
+  filter: opacity(60%);
+}
+.footer__icon:active {
+  filter: opacity(30%);
+}
