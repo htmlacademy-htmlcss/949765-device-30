@@ -20,3 +20,15 @@
 .footer__icon:active {
   filter: opacity(30%);
 }
+.footer__logo:hover {
+  filter: opacity(60%);
+}
+.footer__logo:active {
+  filter: opacity(30%);
+}
+.main__logo:hover {
+  filter: opacity(60%);
+}
+.main__logo:active {
+  filter: opacity(30%);
+}

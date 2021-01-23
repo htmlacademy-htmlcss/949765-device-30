@@ -8,11 +8,11 @@
   <body>
     <header class="main-header">
       <h1 class="visually-hidden">Сайт девайс</h1>
-      <a>
+      <a class="main__logo">
         <img
-          src="img/-e-logo.svg"
+          src="img/logo-header.svg"
           width="163"
-          height="34"
+          height="35"
           alt="Логотип Divice"
         />
       </a>
@@ -52,7 +52,7 @@
           <h2 class="visually-hidden">Навигация</h2>
           <ul class="navigation">
             <li>
-              <a href="№">Коталог товара</a>
+              <a href="catalog.html">Коталог товара</a>
               <div>
                 <ul>
                   <li>
@@ -311,11 +311,11 @@
     </main>
     <footer class="footer">
       <div class="footer__col-left">
-        <a>
+        <a class="footer__logo" href="index.html">
           <img
-            src="img/-e-logo.svg"
+            src="img/logo-footer.svg"
             width="163"
-            height="34"
+            height="35"
             alt="Логотип Divice"
           />
         </a>
@@ -362,5 +362,52 @@
         </a>
       </div>
     </footer>
+    <section class="write-us">
+      <h2>напишите нам</h2>
+
+      <form action="https://echo.htmlacademy.ru/" method="post">
+        <p>
+          <label for="user-name" class="write-us__titles"> Ваше имя:</label>
+          <input
+            class="input"
+            name="name"
+            type="text"
+            id="user-name"
+            placeholder="Имя Фамилия"
+          />
+        </p>
+
+        <p>
+          <label for="feedbackEmail" class="write-us__titles"
+            >Ваш @-maill:</label
+          >
+          <input
+            class="input"
+            name="email"
+            type="text"
+            id="feedbackEmail"
+            placeholder="email@example.com"
+          />
+        </p>
+
+        <p>
+          <label for="feedbacktext" class="write-us__titles"
+            >Текст письма:</label
+          >
+          <textarea
+            class="textarea"
+            name="message"
+            cols="25"
+            rows="5"
+            id="feedbacktext"
+            placeholder="Текст письма в свободной форме"
+          ></textarea>
+        </p>
+        <p>
+          <button class="button" type="submit">Отправить</button>
+        </p>
+      </form>
+      <button class="button" type="button">Закрыть</button>
+    </section>
   </body>
 </html>
