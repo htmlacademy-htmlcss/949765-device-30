@@ -7,6 +7,35 @@
   width: 1px !important;
   overflow: hidden;
 }
+.header {
+  background-color: #f7e296;
+  height: 300px;
+  margin-top: 40px;
+}
+.header__container {
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+.page-logo__img {
+  width: 163px;
+  height: 35px;
+  cursor: pointer;
+}
+.header__logo {
+  margin-top: -59px;
+  display: inline-block;
+}
+.search-form__input {
+  background-color: transparent;
+  width: 114px;
+  height: 20px;
+  margin-left: 61px;
+  border: none;
+}
+
 .logotypes img {
   filter: saturate(0%) opacity(50%);
   transition: 0.3s ease;
@@ -26,9 +55,9 @@
 .footer__logo:active {
   filter: opacity(30%);
 }
-.main__logo:hover {
+.page-logo__img:hover {
   filter: opacity(60%);
 }
-.main__logo:active {
+.page-logo__img:active {
   filter: opacity(30%);
 }
