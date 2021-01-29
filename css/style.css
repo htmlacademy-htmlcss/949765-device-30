@@ -1,3 +1,67 @@
+/* ПЕРЕМЕННЫЕ */
+:root {
+  --basic-black-color: #000000;
+  --basic-white-color: #ffffff;
+  --dark-color: #363636;
+  --basic-grey-color: #464646;
+  --half-grey-color: #7e7e7e;
+  --grey-light-color: #e5e5e5;
+  --basic-special-yellow-color: #f7e296;
+  --special-green: #91c92f;
+  --special-yellow-dark: #f0c52e;
+  --grey-shade: #f2f2f2;
+
+  --basic-font: "Gilroy", sans-serif;
+  --second-font: "Open Sans", sans-serif;
+}
+
+/* ШРИФТЫ */
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-style: normal;
+  src: local("Gilroy"), url("../fonts/gilroyextrabold.woff2") format("woff2"),
+    url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Gilroy"), url("../fonts/gilroylight.woff2") format("woff2"),
+    url("../fonts/gilroylight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Open Sans"), url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
+}
+
+/* БАЗОВАЯ РАЗМЕТКА */
+
+.page__body {
+  font-family: var(--basic-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -7,6 +71,35 @@
   width: 1px !important;
   overflow: hidden;
 }
+
+.container {
+  max-width: 1440px;
+  box-sizing: border-box;
+  padding: 0 140px;
+  margin: 0 auto;
+}
+
+/* БАЗОВАЯ ТИПОГРАФИЯ */
+
+.base-title {
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.button {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 800;
+  border: none;
+  background-color: transparent;
+  color: var(--basic-black-color);
+  cursor: pointer;
+}
+
 .header {
   background-color: #f7e296;
   height: 300px;
@@ -28,18 +121,190 @@
   margin-top: -59px;
   display: inline-block;
 }
-.search-form__input {
+.user-nav__input {
+  font-family: var(--second-font);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
   background-color: transparent;
-  width: 114px;
-  height: 20px;
+  padding: 5px 10px;
+  min-width: 106px;
+
   margin-left: 61px;
   border: none;
 }
 
-.logotypes img {
+.user-nav__form::before {
+  content: url(../img/icons/icon-search.svg);
+}
+
+.user-nav__button {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--basic-black-color);
+  background-color: transparent;
+  border: 2px solid var(--basic-black-color);
+  display: none;
+}
+
+.user-nav__button:hover {
+  background-color: var(--basic-black-color);
+  color: var(--basic-white-color);
+}
+
+.user-nav__button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.user-nav__link {
+  font-family: var(--second-font);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--basic-black-color);
+  position: relative;
+  padding-left: 25px;
+}
+
+.user-nav__link::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.user-nav__link--color {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.user-nav__link--exit::before {
+  background: url(../img/icons/icon-exit.svg);
+  width: 9px;
+  height: 9px;
+}
+
+.user-nav__link--compare::before {
+  background: url(../img/icons/icon-compare.svg);
+  width: 10px;
+  height: 10px;
+}
+
+.user-nav__link--bascet::before {
+  background: url(../img/icons/icon-cart.svg);
+  width: 10px;
+  height: 10px;
+}
+
+.site-nav__link {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--basic-black-color);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.site-nav__link--plus::before {
+  content: url(../img/icons/icon-plus.svg);
+}
+
+.nav-catalog {
+  display: none;
+}
+
+.nav-catalog__link {
+  font-family: var(--second-font);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--basic-black-color);
+}
+
+.slider__quote {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  color: var(--basic-black-color);
+}
+
+.slider__text {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black-color);
+}
+
+.slider__item {
+  font-family: var(--basic-font);
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black-color);
+}
+
+.slider__item-properties {
+  font-family: var(--basic-font);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black-color);
+}
+
+.popular__text {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: var(--basic-black-color);
+}
+
+.service {
+  background: var(--grey-light-color);
+}
+
+.service__tittle {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+  color: var(--basic-black-color);
+}
+
+.service__text {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black-color);
+}
+
+.logotypes {
+  min-height: 280px;
+}
+
+.logotypes__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logotypes__img {
   filter: saturate(0%) opacity(50%);
   transition: 0.3s ease;
 }
+
 .logotypes img:hover {
   filter: none;
 }
@@ -60,4 +325,141 @@
 }
 .page-logo__img:active {
   filter: opacity(30%);
+}
+
+.about-us__title {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+  color: var(--basic-black-color);
+}
+
+.about-us__text {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--basic-black-color);
+}
+
+.about-us__item {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--basic-black-color);
+}
+
+.contacts__title {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+  color: var(--basic-black-color);
+}
+
+.contacts__text {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--basic-black-color);
+}
+
+.footer {
+  background: var(--dark-color);
+
+  min-height: 324px;
+}
+
+.footer__address {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-white-color);
+  font-style: normal;
+}
+
+.footer__link {
+  color: var(--basic-white-color);
+}
+
+.social__link {
+  opacity: 0.3;
+}
+.social__link:hover {
+  opacity: 0.6;
+}
+
+.social__link:active {
+  opacity: 0.1;
+}
+
+.phone {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-white-color);
+}
+
+.feedback {
+  background: var(--basic-white-color);
+}
+
+.feedback__label {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--basic-black-color);
+}
+
+.feedback__input {
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.4);
+  background-color: var(--grey-shade);
+  border: none;
+}
+
+.feedback__textarea {
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.4);
+  background-color: var(--grey-shade);
+  border: none;
+}
+
+.button-close {
+  background: url("../img/icons/icon-close.svg") no-repeat;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: var(--special-yellow-dark);
+  border: none;
+  background-position: center;
+  opacity: 0.5;
+  transition: opacity cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  cursor: pointer;
+}
+
+.button-close:hover {
+  opacity: 1;
+}
+
+.button-close:active {
+  opacity: 0.3;
+}
+
+.button-close:focus {
+  outline: none;
 }
