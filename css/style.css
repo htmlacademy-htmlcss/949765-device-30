@@ -11,8 +11,8 @@
   --special-yellow-dark: #f0c52e;
   --grey-shade: #f2f2f2;
 
-  --basic-font: "Gilroy", sans-serif;
-  --second-font: "Open Sans", sans-serif;
+  --basic-font: "Gilroy", "Arial", sans-serif;
+  --second-font: "Open Sans", "Tahoma", sans-serif;
 }
 
 /* ШРИФТЫ */
@@ -58,8 +58,17 @@ a {
   text-decoration: none;
 }
 
-ul {
+.site-nav__list,
+.user-nav__list,
+.nav-catalog__list,
+.slider__list,
+.popular__list,
+.about-us__list,
+.social,
+.user-nav {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {
