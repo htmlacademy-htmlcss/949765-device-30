@@ -10,6 +10,8 @@
   --special-green: #91c92f;
   --special-yellow-dark: #f0c52e;
   --grey-shade: #f2f2f2;
+  --grey-pagination: #ebebeb;
+  --gery-filtercatalog: #dcdcdc;
 
   --basic-font: "Gilroy", "Arial", sans-serif;
   --second-font: "Open Sans", "Tahoma", sans-serif;
@@ -65,7 +67,12 @@ a {
 .popular__list,
 .about-us__list,
 .social,
-.user-nav {
+.user-nav,
+.breadcrumbs__list,
+.colorproduct__list,
+.functionsproduct__list,
+.sorting__list,
+.pagination__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -471,4 +478,211 @@ a {
 
 .button-close:focus {
   outline: none;
+}
+
+/* СТИЛИЗАЦИЯ КАТАЛОГА */
+
+.page-title {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  color: var(--basic-black-color);
+}
+
+.breadcrumbs__link {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black-color);
+}
+
+.breadcrumbs__item {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black-color);
+  opacity: 0.3;
+}
+
+.filtercatalog {
+  background: var(--grey-light-color);
+  width: 468px;
+  height: auto;
+}
+
+.filtercatalog__header {
+  background: var(--gery-filtercatalog);
+}
+
+.filtercatalog__title {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black-color);
+}
+
+.priceproduct__title {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black-color);
+}
+
+.colorproduct__title {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black-color);
+}
+
+.coloproduct__label {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black-color);
+}
+
+.functionsproduct__label {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black-color);
+}
+
+.functionsproduct__label {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black-color);
+}
+
+.sorting {
+  background: var(--grey-light-color);
+  width: 972px;
+}
+
+.sorting__title {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black-color);
+}
+
+.sorting__link {
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black-color);
+}
+
+.sorting__link--type {
+  opacity: 0.3;
+}
+
+.buttonsorting__button {
+  background: url(../img/icons/icon-arrow-down.svg);
+  width: 11px;
+  height: 10px;
+  display: inline-block;
+}
+
+.buttonsorting__button--up {
+  transform: rotate(180deg);
+  opacity: 0.2;
+}
+
+.buttonsorting__button--down:hover {
+  opacity: 0.2;
+}
+
+.buttonsorting__button:active {
+  opacity: 1;
+}
+
+.products__link {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: var(--basic-black-color);
+}
+
+.products__span {
+  font-family: var(--basic-font);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  color: var(--basic-black-color);
+}
+
+.button__comparison {
+  font-family: var(--second-font);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black-color);
+  border: none;
+  background-color: Transparent;
+}
+
+.pagination {
+  background: var(--grey-pagination);
+}
+
+.pagination__back {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-black-color);
+  border: none;
+  background-color: Transparent;
+}
+
+.pagination__go {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-black-color);
+  border: none;
+  background-color: Transparent;
+}
+
+.pagination__number {
+  font-family: var(--basic-font);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black-color);
+  border: none;
+  background-color: Transparent;
+}
+
+.pagination__number--two {
+  opacity: 0.3;
+}
+
+.pagination__number-three {
+  opacity: 0.3;
 }
