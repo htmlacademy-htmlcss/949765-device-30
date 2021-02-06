@@ -748,6 +748,7 @@ co .about-us__title {
 
 .pagination {
   background: var(--grey-pagination);
+  display: flex;
 }
 
 .pagination__back {
