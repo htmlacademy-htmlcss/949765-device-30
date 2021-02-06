@@ -483,6 +483,7 @@ co .about-us__title {
 
 .footer__link {
   color: var(--basic-white-color);
+  margin-right: 36px;
 }
 
 .social__link {
