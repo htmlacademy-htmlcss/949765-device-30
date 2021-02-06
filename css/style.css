@@ -11,7 +11,7 @@
   --special-yellow-dark: #f0c52e;
   --grey-shade: #f2f2f2;
   --grey-pagination: #ebebeb;
-  --gery-catalog-filter: #dcdcdc;
+  --grey-catalog-filter: #dcdcdc;
 
   --basic-font: "Gilroy", "Arial", sans-serif;
   --second-font: "Open Sans", "Tahoma", sans-serif;
@@ -483,6 +483,7 @@ co .about-us__title {
 
 .footer__link {
   color: var(--basic-white-color);
+  margin-right: 36px;
 }
 
 .social__link {
@@ -616,7 +617,7 @@ co .about-us__title {
 }
 
 .catalog-filter__header {
-  background: var(--gery-filtercatalog);
+  background: var(--grey-catalog-filter);
 }
 
 .catalog-filter__title {
