@@ -127,82 +127,95 @@
       </div>
       <div class="catalog-columms">
         <div class="catalog-col">
-          <section class="filtercatalog">
-            <div class="filtercatalog__header">
-              <h2 class="filtercatalog__title">Фильтр:</h2>
+          <section class="catalog-filter">
+            <div class="catalog-filter__header">
+              <h2 class="catalog-filter__title">Фильтр:</h2>
             </div>
             <form
-              class="filtercatalog__form"
+              class="catalog-filter__form"
               action="https://echo.htmlacademy.ru"
               method="get"
             >
-              <div class="priceproduct">
-                <h3 class="priceproduct__title">Стоимость</h3>
-                <input type="range" min="0" max="7000" step="5000" value="70" />
+              <div class="product-price">
+                <label for="range" class="product-price__title"
+                  >Стоимость</label
+                >
+                <input
+                  type="range"
+                  min="0"
+                  max="7000"
+                  step="5000"
+                  value="70"
+                  id="range"
+                />
               </div>
-              <div class="colorproduct">
-                <h3 class="colorproduct__title">Цвет</h3>
-                <ul class="colorproduct__list">
-                  <li class="colorproduct__item">
+              <div class="product-color">
+                <h3 class="product-color__title">Цвет</h3>
+                <ul class="product-color__list">
+                  <li class="product-color__item">
                     <input
-                      class="colorproduct__input"
+                      class="product-color__input"
                       type="checkbox"
                       name="black"
                       id="black"
                       checked
                     />
-                    <label class="colorproduct__label" for="black"
+                    <label class="product-color__label" for="black"
                       >Черный</label
                     >
                   </li>
-                  <li class="colorproduct__item">
+                  <li class="product-color__item">
                     <input
-                      class="colorproduct__input"
+                      class="product-color__input"
                       type="checkbox"
                       name="white"
                       id="white"
                     />
-                    <label class="colorproduct__label" for="white">Белый</label>
+                    <label class="product-color__label" for="white"
+                      >Белый</label
+                    >
                   </li>
-                  <li class="colorproduct__item">
+                  <li class="product-color__item">
                     <input
-                      class="colorproduct__input"
+                      class="product-color__input"
                       type="checkbox"
                       name="blue"
                       id="blue"
                       checked
                     />
-                    <label class="colorproduct__label" for="blue">Синий</label>
+                    <label class="product-color__label" for="blue">Синий</label>
                   </li>
-                  <li class="colorproduct__item">
+                  <li class="product-color__item">
                     <input
-                      class="colorproduct__input"
+                      class="product-color__input"
                       type="checkbox"
                       name="red"
                       id="red"
                       checked
                     />
-                    <label class="colorproduct__label" for="red">Красный</label>
+                    <label class="product-color__label" for="red"
+                      >Красный</label
+                    >
                   </li>
-                  <li class="colorproduct__item">
+                  <li class="product-color__item">
                     <input
-                      class="colorproduct__input"
+                      class="product-color__input"
                       type="checkbox"
                       name="pink"
                       id="pink"
                     />
-                    <label class="colorproduct__label" for="pink"
+                    <label class="product-color__label" for="pink"
                       >Розовый</label
                     >
                   </li>
                 </ul>
               </div>
-              <div class="functionsproduct">
-                <h3 class="functionsproduct__title">Bluetooth</h3>
-                <ul class="functionsproduct__list">
-                  <li class="functionsproduct__item">
+              <div class="product-functions">
+                <h3 class="product-functions__title">Bluetooth</h3>
+                <ul class="product-functions__list">
+                  <li class="product-functions__item">
                     <input
-                      class="functionsproduct__input"
+                      class="product-functions__input"
                       type="radio"
                       name="Bluetooth
                   availability"
@@ -210,20 +223,20 @@
                       value="yes"
                       checked
                     />
-                    <label class="functionsproduct__label" for="button1"
+                    <label class="product-functions__label" for="button1"
                       >Есть</label
                     >
                   </li>
                   <li>
                     <input
-                      class="functionsproduct__input"
+                      class="product-functions__input"
                       type="radio"
                       name="Bluetooth
                   availability"
                       value="no"
                       id="button1"
                     />
-                    <label class="functionsproduct__label" for="button"
+                    <label class="product-functions__label" for="button"
                       >Нет</label
                     >
                   </li>
@@ -251,15 +264,15 @@
                 >
               </li>
             </ul>
-            <div class="buttonsorting">
+            <div class="button-sorting">
               <a
                 href="#"
-                class="buttonsorting__button buttonsorting__button--up"
+                class="button-sorting__button button-sorting__button--up"
                 ><span class="visually-hidden">По возрастанию</span>
               </a>
               <a
                 href="#"
-                class="buttonsorting__button buttonsorting__button--down"
+                class="button-sorting__button button-sorting__button--down"
                 ><span class="visually-hidden">По убыванию</span>
               </a>
             </div>

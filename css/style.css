@@ -11,7 +11,7 @@
   --special-yellow-dark: #f0c52e;
   --grey-shade: #f2f2f2;
   --grey-pagination: #ebebeb;
-  --gery-filtercatalog: #dcdcdc;
+  --gery-catalog-filter: #dcdcdc;
 
   --basic-font: "Gilroy", "Arial", sans-serif;
   --second-font: "Open Sans", "Tahoma", sans-serif;
@@ -76,8 +76,8 @@ a {
 .social,
 .user-nav,
 .breadcrumbs__list,
-.colorproduct__list,
-.functionsproduct__list,
+.product-color__list,
+.product-functions__list,
 .sorting__list,
 .pagination__list {
   list-style-type: none;
@@ -609,17 +609,17 @@ co .about-us__title {
   opacity: 0.3;
 }
 
-.filtercatalog {
+.catalog-filter {
   background: var(--grey-light-color);
   width: 468px;
   height: auto;
 }
 
-.filtercatalog__header {
+.catalog-filter__header {
   background: var(--gery-filtercatalog);
 }
 
-.filtercatalog__title {
+.catalog-filter__title {
   font-family: var(--basic-font);
   font-weight: 800;
   font-size: 16px;
@@ -628,7 +628,7 @@ co .about-us__title {
   color: var(--basic-black-color);
 }
 
-.priceproduct__title {
+.product-price__title {
   font-family: var(--basic-font);
   font-weight: 800;
   font-size: 14px;
@@ -637,7 +637,7 @@ co .about-us__title {
   color: var(--basic-black-color);
 }
 
-.colorproduct__title {
+.product-color__title {
   font-family: var(--basic-font);
   font-weight: 800;
   font-size: 14px;
@@ -654,7 +654,7 @@ co .about-us__title {
   color: var(--basic-black-color);
 }
 
-.functionsproduct__label {
+.product-functions__label {
   font-family: var(--basic-font);
   font-weight: 800;
   font-size: 14px;
@@ -663,7 +663,7 @@ co .about-us__title {
   color: var(--basic-black-color);
 }
 
-.functionsproduct__label {
+.product-functions__label {
   font-family: var(--second-font);
   font-weight: 300;
   font-size: 14px;
@@ -697,23 +697,23 @@ co .about-us__title {
   opacity: 0.3;
 }
 
-.buttonsorting__button {
+.button-sorting__button {
   background: url(../img/icons/icon-arrow-down.svg);
   width: 11px;
   height: 10px;
   display: inline-block;
 }
 
-.buttonsorting__button--up {
+.button-sorting__button--up {
   transform: rotate(180deg);
   opacity: 0.2;
 }
 
-.buttonsorting__button--down:hover {
+.button-sorting__button--down:hover {
   opacity: 0.2;
 }
 
-.buttonsorting__button:active {
+.button-sorting__button:active {
   opacity: 1;
 }
 
