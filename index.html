@@ -19,7 +19,7 @@
             alt="Логотип Divice"
           />
         </a>
-        <nav class="site-nav">
+        <nav class="page-nav">
           <section class="user-nav">
             <h2 class="visually-hidden">Блок пользователя</h2>
             <form
@@ -37,12 +37,12 @@
             </form>
 
             <ul class="user-nav__list">
-              <li class="user-nav__item">
+              <li class="user-nav__item user-nav__item--exit">
                 <a class="user-nav__link user-nav__link--exit" href="#"
                   >Войти</a
                 >
               </li>
-              <li class="user-nav__item">
+              <li class="user-nav__item user-nav__item--compare">
                 <a class="user-nav__link user-nav__link--compare" href="#"
                   >Сравнить</a
                 >
@@ -89,7 +89,7 @@
                   </ul>
                   <ul class="nav-catalog__list">
                     <li class="nav-catalog__item">
-                      <a class="nav-catalog__link" href="#">Квадрокоптеры</a>
+                      <a class="nav-catalog__link" href="#">Квадрокоптер</a>
                     </li>
                   </ul>
                 </div>
@@ -113,7 +113,7 @@
         <div class="container">
           <h2 class="visually-hidden">Слайдер</h2>
           <div class="slider__slide slider__slide--1">
-            <div class="slider__col">
+            <div class="slider__col slider__col--left">
               <img
                 class="slider__img slider__img--selfi"
                 src="img/slider-1.png"
@@ -122,7 +122,7 @@
                 alt="Палка для селфи"
               />
             </div>
-            <div class="slider__col">
+            <div class="slider__col slider__col--right">
               <strong class="slider__quote"
                 >Делай селфи,<br />
                 как Бен Стиллер!
@@ -132,16 +132,19 @@
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
               <a class="button slider__button" href="#">Подробнее</a>
-              <ul class="slider__list">
-                <li class="slider__item">8,5 м</li>
-                <li class="slider__item slider__item-properties">
-                  Длина палки
-                </li>
-                <li class="slider__item">5 кг</li>
-                <li class="slider__item slider__item-properties">Вес палки</li>
-                <li class="slider__item">Карбон</li>
-                <li class="slider__item slider__item-properties">Материал</li>
-              </ul>
+
+              <table class="slider__table">
+                <tr class="slider__table-row">
+                  <th class="slider__table-heading">8,5 м</th>
+                  <th class="slider__table-heading">5 кг</th>
+                  <th class="slider__table-heading">Карбон</th>
+                </tr>
+                <tr class="slider__table-row">
+                  <td class="slider__table-cell">Длина палки</td>
+                  <td class="slider__table-cell">Вес палки</td>
+                  <td class="slider__table-cell">Материал</td>
+                </tr>
+              </table>
             </div>
           </div>
           <div class="slider__slide slider__slide--2">
@@ -154,7 +157,7 @@
                 alt="Фитнес-браслеты"
               />
             </div>
-            <div class="slider__col">
+            <div class="slider__col2">
               <strong class="slider__quote">Худеем правильно!</strong>
               <p class="slider__text">
                 Мотивирующие фитнес-браслеты помогут найти в себе силы<br />
@@ -209,74 +212,84 @@
           <ul class="popular__list">
             <li class="popular__item">
               <a class="popular__link" href="#">
-                <img
-                  class="popular__img popular__img--1"
-                  src="img/popular-1.png"
-                  width="97"
-                  height="55"
-                  alt="Виртуальная реальность"
-                />
+                <div class="popular__img">
+                  <img
+                    src="img/popular-1.png"
+                    width="97"
+                    height="55"
+                    alt="Виртуальная реальность"
+                  />
+                </div>
                 <span class="popular__text">Виртуальная реальность</span>
               </a>
             </li>
             <li class="popular__item">
               <a class="popular__link" href="#">
-                <img
-                  class="popular__img popular__img--2"
-                  src="img/popular-2.png"
-                  width="86"
-                  height="117"
-                  alt="Монопод для селфи"
-                />
-                <span class="popular__text">Моноподы для селфи</span>
+                <div class="popular__img">
+                  <img
+                    src="img/popular-2.png"
+                    width="86"
+                    height="117"
+                    alt="Монопод для селфи"
+                  />
+                </div>
+                <span class="popular__text"
+                  >Моноподы<br />
+                  для селфи</span
+                >
               </a>
             </li>
             <li class="popular__item">
               <a class="popular__link" href="#">
-                <img
-                  class="popular__img popular__img--3"
-                  src="img/popular-3.png"
-                  width="71"
-                  height="87"
-                  alt="Экшн-камеры"
-                />
+                <div class="popular__img">
+                  <img
+                    src="img/popular-3.png"
+                    width="71"
+                    height="87"
+                    alt="Экшн-камеры"
+                  />
+                </div>
                 <span class="popular__text">Экшн-камеры</span>
               </a>
             </li>
             <li class="popular__item">
               <a class="popular__link" href="#">
-                <img
-                  class="popular__img popular__img--4"
-                  src="img/popular-4.png"
-                  width="107"
-                  height="65"
-                  alt="Умные часы"
-                />
-                <span class="popular__text">Умные часы</span>
-              </a>
-            </li>
-            <li class="popular__item">
-              <a class="popular__link" href="#">
-                <img
-                  class="popular__img popular__img--5"
-                  src="img/popular-5.png"
-                  width="56"
-                  height="98"
-                  alt="Квадрокоптеры"
-                />
-                <span class="popular__text">Квадрокоптеры</span>
-              </a>
-            </li>
-            <li class="popular__item">
-              <a class="popular__link" href="#">
-                <img
-                  class="popular__img popular__img--6"
-                  src="img/popular-6.png"
-                  width="132"
-                  height="69"
-                  alt="Фитнес-браслеты"
-                />
+                <div class="popular__img">
+                  <img
+                    src="img/popular-4.png"
+                    width="107"
+                    height="65"
+                    alt="Умные часы"
+                  />
+                </div>
                 <span class="popular__text">Фитнес-браслеты</span>
+              </a>
+            </li>
+            <li class="popular__item">
+              <a class="popular__link" href="#">
+                <div class="popular__img">
+                  <img
+                    src="img/popular-5.png"
+                    width="56"
+                    height="98"
+                    alt="Квадрокоптеры"
+                  />
+                </div>
+                <span class="popular__text"> Умные часы</span>
+              </a>
+            </li>
+
+            <li class="popular__item">
+              <a class="popular__link" href="#">
+                <div class="popular__img">
+                  <img
+                    src="img/popular-6.png"
+                    width="132"
+                    height="69"
+                    alt="Фитнес-браслеты"
+                  />
+                </div>
+                <span class="popular__text">Квадрокоптеры</span>
               </a>
             </li>
           </ul>
@@ -284,19 +297,19 @@
       </section>
       <section class="service">
         <div class="container service__container">
-          <div class="service__col">
+          <div class="service__col-left">
             <button class="button service__button">Доставка</button>
             <button class="button service__button">Гарантия</button>
             <button class="button service__button">кредит</button>
           </div>
-          <div class="service__col">
+          <div class="service__col-right">
             <h2 class="service__tittle">Доставка</h2>
             <p class="service__text">
               Мы с удовольствием доставим ваш товар прямо к вашему<br />
               подъезду совершенно бесплатно! Ведь мы неплохо<br />
               заработаем, поднимая его на ваш этаж.
             </p>
-            <h2 class="service__tittle">Гарантия</h2>
+            <!-- <h2 class="service__tittle">Гарантия</h2>
             <p class="service__text">
               Если из-за возгорания купленного у нас товара у вас сгорит дом
               —<br />
@@ -308,7 +321,7 @@
               Залезть в долговую яму стало проще! Кредитные консультанты<br />
               подберут для вас наиболее выгодные<br />
               условия кредита. Выгодные для нашего банка, разумеется.
-            </p>
+            </p> -->
           </div>
         </div>
       </section>
@@ -357,7 +370,7 @@
             Огромный выбор гаджетов не оставит равнодушным гика,<br />
             который есть в каждом из нас.
           </p>
-          <p class="about-us__text">
+          <p class="about-us__text about-us__text--margin">
             Мы можем доставить ваш товар в самые отдаленные точки<br />
             России! DEVICE работает со многими транспортными компаниями:
           </p>
@@ -415,7 +428,7 @@
               </li>
 
               <li class="site-nav__item footer__item">
-                <a class="site-nav__link footer__link" href="#">Кредит</a>
+                <a class="site-nav__link footer__link" href="#">Контакты</a>
               </li>
             </ul>
           </section>
@@ -453,7 +466,7 @@
           </ul>
         </div>
         <div class="footer__col-right">
-          <ul class="user-nav">
+          <ul class="user-nav footer__nav">
             <li class="user-nav__item">
               <a class="user-nav__link user-nav__link--color" href="#">Войти</a>
             </li>
@@ -503,9 +516,7 @@
         </p>
 
         <p>
-          <label class="feedback__label" for="feedbackEmail"
-            >Ваш @-maill:</label
-          >
+          <label class="feedback__label" for="feedbackEmail">Ваш e-mail:</label>
           <input
             class="feedback__input"
             name="email"
@@ -515,7 +526,7 @@
           />
         </p>
 
-        <p>
+        <p class="feedback__wrapper">
           <label class="feedback__label" for="feedbacktext"
             >Текст письма:</label
           >
@@ -525,14 +536,11 @@
             cols="25"
             rows="5"
             id="feedbacktext"
-            placeholder="Текст письма в свободной форме"
+            placeholder="В свободной форме"
           ></textarea>
         </p>
-        <p>
-          <button class="button feedback__button" type="submit">
-            Отправить
-          </button>
-        </p>
+
+        <button class="button feedback__button" type="submit">Отправить</button>
       </form>
       <button class="button-close feedback__close" type="button"></button>
     </section>
