@@ -75,7 +75,7 @@ a {
 .about-us__list,
 .social,
 .user-nav,
-.breadcrumbs__list,
+.breadcrumbs,
 .product-color__list,
 .product-functions__list,
 .sorting__list,
@@ -220,6 +220,10 @@ a {
 
 .user-nav__link--color {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.user-nav__link--exit {
+  padding-left: 16px;
 }
 
 /* .user-nav__link--exit::before {
@@ -767,25 +771,28 @@ a {
 }
 
 /* СТИЛИЗАЦИЯ КАТАЛОГА */
+.header__container--catalog {
+  min-height: 186px;
+}
+
+.page-catalog__header {
+  padding-left: 200px;
+  padding-top: 44px;
+}
+
+.page-catalog__title {
+  margin: 0px;
+}
 
 .breadcrumbs {
-  display: grid;
+  display: flex;
+  margin-top: 30px;
 }
 
 .catalog-columms {
   display: grid;
-  grid-template-columns: 468px 1fr;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: 360px 360px;
-  grid-gap: 40px;
-  margin-left: 72px;
-}
-
-.breadcrumbs .page-title {
-  grid-column: 1 / -1;
+  grid-template-columns: 0.58fr 1fr;
+  margin-top: 50px;
 }
 
 .page-title {
@@ -811,16 +818,18 @@ a {
   line-height: 19px;
   color: var(--basic-black-color);
   opacity: 0.3;
+  padding-right: 41px;
 }
 
 .catalog-filter {
   background: var(--grey-light-color);
-  width: 468px;
-  height: auto;
+  height: 100%;
 }
 
 .catalog-filter__header {
   background: var(--grey-catalog-filter);
+  padding: 12px 190px 12px 0;
+  text-align: right;
 }
 
 .catalog-filter__title {
@@ -830,6 +839,26 @@ a {
   line-height: 20px;
   letter-spacing: 0.1em;
   color: var(--basic-black-color);
+  text-transform: uppercase;
+}
+
+.catalog-filter__form {
+  margin-left: auto;
+  max-width: 200px;
+  padding: 69px 68px 0 0px;
+}
+
+.catalog-filter__group {
+  padding-top: 14px;
+  padding-bottom: 92px;
+  border-top: 2px solid var(--basic-black-color);
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 360px 360px;
+  grid-gap: 48px 40px;
+  padding: 69px 0 0 72px;
 }
 
 .product-price__title {
@@ -848,6 +877,7 @@ a {
   line-height: 17px;
   letter-spacing: 0.1em;
   color: var(--basic-black-color);
+  margin: 0;
 }
 
 .coloproduct__label {
@@ -876,8 +906,19 @@ a {
 }
 
 .sorting {
+  display: flex;
+  align-items: center;
   background: var(--grey-light-color);
-  width: 972px;
+  padding: 12px 0 12px 73px;
+}
+
+.sorting__list {
+  display: flex;
+  margin-left: 73px;
+}
+
+.sorting__item {
+  margin-right: 30px;
 }
 
 .sorting__title {
@@ -887,6 +928,7 @@ a {
   line-height: 20px;
   letter-spacing: 0.1em;
   color: var(--basic-black-color);
+  text-transform: uppercase;
 }
 
 .sorting__link {
@@ -901,11 +943,16 @@ a {
   opacity: 0.3;
 }
 
+.button-sorting {
+  margin-left: 191px;
+}
+
 .button-sorting__button {
   background: url(../img/icons/icon-arrow-down.svg);
   width: 11px;
   height: 10px;
   display: inline-block;
+  margin-right: 19px;
 }
 
 .button-sorting__button--up {
@@ -921,6 +968,13 @@ a {
   opacity: 1;
 }
 
+.products__details {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 26px;
+}
+
 .products__link {
   font-family: var(--basic-font);
   font-weight: 800;
@@ -930,13 +984,14 @@ a {
   color: var(--basic-black-color);
 }
 
-.products__span {
+.products__price {
   font-family: var(--basic-font);
   font-weight: 300;
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.05em;
   color: var(--basic-black-color);
+  white-space: nowrap;
 }
 
 .button__comparison {
@@ -953,9 +1008,23 @@ a {
 .pagination {
   background: var(--grey-pagination);
   display: flex;
+  justify-content: space-between;
+  margin: 40px 0 78px 73px;
+  padding: 24px;
+  width: 760px;
+  box-sizing: border-box;
 }
 
-.pagination__back {
+.pagination__list {
+  display: flex;
+  margin-left: 7px;
+}
+
+.pagination__item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.pagination__button {
   font-family: var(--basic-font);
   font-weight: 800;
   font-size: 16px;
@@ -963,16 +1032,8 @@ a {
   color: var(--basic-black-color);
   border: none;
   background-color: Transparent;
-}
-
-.pagination__go {
-  font-family: var(--basic-font);
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 20px;
-  color: var(--basic-black-color);
-  border: none;
-  background-color: Transparent;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
 }
 
 .pagination__number {
@@ -992,4 +1053,8 @@ a {
 
 .pagination__number-three {
   opacity: 0.3;
+}
+
+.footer--catalog {
+  margin-top: 0;
 }
