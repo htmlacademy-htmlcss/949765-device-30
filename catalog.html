@@ -9,7 +9,7 @@
   <body class="page__body">
     <header class="header">
       <h1 class="visually-hidden">Сайт девайс</h1>
-      <div class="header__container">
+      <div class="header__container header__container--catalog">
         <a class="page-logo header__logo" href="index.html">
           <img
             class="page-logo__img"
@@ -36,7 +36,7 @@
               <button class="user-nav__button" type="submit">Найти</button>
             </form>
 
-            <ul class="user-nav__list">
+            <ul class="user-nav__list user-nav__list--catalog">
               <li class="user-nav__item">
                 <a href="#" class="user-nav__link user-nav__link--name"
                   >Валентин Петухов</a
@@ -45,7 +45,7 @@
                   >Выйти</a
                 >
               </li>
-              <li class="user-nav__item">
+              <li class="user-nav__item user-nav__item--compare">
                 <a class="user-nav__link user-nav__link--compare" href="#"
                   >Сравнить</a
                 >
@@ -64,7 +64,7 @@
                 <a
                   class="site-nav__link site-nav__link--plus"
                   href="catalog.html"
-                  >Каталог товара</a
+                  >Каталог товаров</a
                 >
                 <div class="nav-catalog">
                   <ul class="nav-catalog__list">
@@ -111,11 +111,11 @@
         </nav>
       </div>
     </header>
-    <main class="page-catalog container">
-      <div class="breadcrumbs">
-        <h2 class="page-title">Моноподы для селфи</h2>
+    <main class="page-catalog">
+      <div class="page-catalog__header container">
+        <h2 class="page-title page-catalog__title">Моноподы для селфи</h2>
 
-        <ul class="breadcrumbs__list">
+        <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
           </li>
@@ -136,7 +136,7 @@
               action="https://echo.htmlacademy.ru"
               method="get"
             >
-              <div class="product-price">
+              <div class="product-price catalog-filter__group">
                 <label for="range" class="product-price__title"
                   >Стоимость</label
                 >
@@ -149,7 +149,7 @@
                   id="range"
                 />
               </div>
-              <div class="product-color">
+              <div class="product-color catalog-filter__group">
                 <h3 class="product-color__title">Цвет</h3>
                 <ul class="product-color__list">
                   <li class="product-color__item">
@@ -210,7 +210,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="product-functions">
+              <div class="product-functions catalog-filter__group">
                 <h3 class="product-functions__title">Bluetooth</h3>
                 <ul class="product-functions__list">
                   <li class="product-functions__item">
@@ -282,64 +282,67 @@
             <article class="products__one">
               <h2 class="visually-hidden">Любительская селфи-палка</h2>
               <img
-                class="products__img products__img--one"
+                class="products__img"
                 src="img/product-1.jpg"
                 alt="Любительская селфи-палка"
                 width="360"
                 height="380"
               />
-              <a class="products__link products__link--one" href="#"
-                >Любительская селфи-палка</a
-              >
-              <span class="products__span products__span--one">1 100 руб.</span>
+              <div class="products__details">
+                <a class="products__link" href="#">Любительская селфи-палка</a>
+                <span class="products__price">1 100 руб.</span>
+              </div>
             </article>
             <article class="products__two">
               <h2 class="visually-hidden">Профессиональная селфи-палка</h2>
               <img
-                class="products__img products__img--two"
+                class="products__img"
                 src="img/product-2.jpg"
                 alt="Профессиональная
                 селфи-палка "
                 width="360"
                 height="380"
               />
-
-              <a class="products__link products__link--two" href="#">
-                Профессиональная селфи-палка</a
-              >
-              <span class="products__span products__span--two">1 500 руб.</span>
+              <div class="products__details">
+                <a class="products__link" href="#">
+                  Профессиональная<br />
+                  селфи-палка</a
+                >
+                <span class="products__price">1 500 руб.</span>
+              </div>
             </article>
             <article class="products__three">
               <h2 class="visually-hidden">Непотопляемая селфи-палка</h2>
               <img
-                class="products__img products__img--three"
+                class="products__img"
                 src="img/product-3.jpg"
                 alt="Непотопляемая селфи-палка"
                 width="360"
                 height="380"
               />
-              <a class="products__link products__link--three" href="#"
-                >Непотопляемая селфи-палка</a
-              >
-              <span class="products__span products__span--tree"
-                >1 500 руб.</span
-              >
+              <div class="products__details">
+                <a class="products__link" href="#"
+                  >Непотопляемая<br />
+                  селфи-палка</a
+                >
+                <span class="products__price">1 500 руб.</span>
+              </div>
             </article>
             <article class="products__four">
-              <h2 class="visually-hidden">Селфи-палка «Следуй за мной</h2>
+              <h2 class="visually-hidden">Селфи-палка Следуй за мной</h2>
               <img
-                class="products__img products__img--four"
+                class="products__img"
                 src="img/product-4.jpg"
                 alt="Селфи-палка «Следуй за мной»"
                 width="360"
                 height="380"
               />
-              <a class="products__link products__link--four" href="#"
-                >Селфи-палка «Следуй за мной</a
-              >
-              <span class="products__span products__span--four"
-                >1 900 руб.</span
-              >
+              <div class="products__details">
+                <a class="products__link" href="#"
+                  >Селфи-палка «Следуй за мной»
+                </a>
+                <span class="products__price">1 900 руб.</span>
+              </div>
             </article>
             <!-- <div class="button">
               <button class="button button__basket">Корзина</button>
@@ -347,7 +350,7 @@
             </div> -->
           </section>
           <div class="pagination">
-            <button class="pagination__back">Назад</button>
+            <button class="pagination__button">Назад</button>
             <ul class="pagination__list">
               <li class="pagination__item">
                 <button class="pagination__number pagination__number--one">
@@ -365,12 +368,12 @@
                 </button>
               </li>
             </ul>
-            <button class="pagination__go">Вперд</button>
+            <button class="pagination__button">Вперед</button>
           </div>
         </div>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer footer--catalog">
       <div class="container footer__container">
         <div class="footer__col-left">
           <a class="footer__link" href="index.html">
