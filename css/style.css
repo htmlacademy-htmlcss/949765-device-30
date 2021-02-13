@@ -12,6 +12,7 @@
   --grey-shade: #f2f2f2;
   --grey-pagination: #ebebeb;
   --grey-catalog-filter: #dcdcdc;
+  --transparent-color: transparent;
 
   --basic-font: "Gilroy", "Arial", sans-serif;
   --second-font: "Open Sans", "Tahoma", sans-serif;
@@ -118,7 +119,7 @@ a {
   font-family: inherit;
   font-weight: 800;
   border: none;
-  background-color: transparent;
+  background-color: var(--transparent-color);
   color: var(--basic-black-color);
   cursor: pointer;
 }
@@ -128,8 +129,7 @@ a {
 }
 .header__container {
   min-height: 300px;
-  background-color: #f7e296;
-
+  background-color: var(--basic-special-yellow-color);
   width: 1160px;
   margin-left: auto;
   margin-right: auto;
@@ -164,7 +164,7 @@ a {
   line-height: 20px;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.3);
-  background-color: transparent;
+  background-color: var(--transparent-color);
   padding: 5px 10px 5px 38px;
   min-width: 106px;
   border: none;
@@ -181,7 +181,7 @@ a {
   line-height: 20px;
   text-transform: uppercase;
   color: var(--basic-black-color);
-  background-color: transparent;
+  background-color: var(--transparent-color);
   border: 2px solid var(--basic-black-color);
   display: none;
 }
@@ -880,14 +880,6 @@ a {
   margin: 0;
 }
 
-.coloproduct__label {
-  font-family: var(--second-font);
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 19px;
-  color: var(--basic-black-color);
-}
-
 .product-functions__label {
   font-family: var(--basic-font);
   font-weight: 800;
@@ -1033,7 +1025,7 @@ a {
   border: none;
   background-color: Transparent;
   text-transform: uppercase;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.1em;
 }
 
 .pagination__number {
