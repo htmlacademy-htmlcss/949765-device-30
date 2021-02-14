@@ -13,6 +13,12 @@
   --grey-pagination: #ebebeb;
   --grey-catalog-filter: #dcdcdc;
   --transparent-color: transparent;
+  --opasity-color: rgba(0, 0, 0, 0.3);
+  --opasity-black-color: rgba(0, 0, 0, 0.6);
+  --gery-opasity-color: rgba(255, 255, 255, 0.7);
+  --basic-grey-opasity: rgba(255, 255, 255, 0.3);
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --dark-opasity: rgba(0, 0, 0, 0.4);
 
   --basic-font: "Gilroy", "Arial", sans-serif;
   --second-font: "Open Sans", "Tahoma", sans-serif;
@@ -184,19 +190,19 @@ a {
 }
 
 .user-nav__input::placeholder {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--opasity-color);
 }
 
 .user-nav__input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--opasity-color);
 }
 
 .user-nav__input:hover::placeholder {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--opasity-black-color);
 }
 
 .user-nav__input:hover::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--opasity-black-color);
 }
 
 .user-nav__input:focus {
@@ -235,7 +241,7 @@ a {
 }
 
 .user-nav__button:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-grey-opasity);
 }
 
 .user-nav__link {
@@ -266,7 +272,7 @@ a {
 }
 
 .footer .user-nav__link {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--gery-opasity-color);
 }
 
 .footer .user-nav__link--user::before {
@@ -363,12 +369,12 @@ a {
 }
 
 .site-nav__link--plus:hover {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--opasity-black-color);
   opacity: 1;
 }
 
 .site-nav__link--plus:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--opasity-color);
   opacity: 1;
 }
 
@@ -514,7 +520,7 @@ a {
 }
 
 .button:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--opasity-color);
 }
 
 .slider__table {
@@ -563,7 +569,7 @@ a {
 }
 
 .popular__link:active .popular__text {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--opasity-color);
 }
 
 .popular__link:active img {
@@ -939,7 +945,7 @@ a {
   width: 960px;
   height: 550px;
   position: absolute;
-  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 16px 0 var(--shadow-color);
   display: none;
 }
 
@@ -975,7 +981,7 @@ a {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--dark-opasity);
   background-color: var(--grey-shade);
   border: none;
   width: 100%;
@@ -990,7 +996,7 @@ a {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--dark-opasity);
   background-color: var(--grey-shade);
   border: none;
   resize: none;
