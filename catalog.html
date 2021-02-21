@@ -122,7 +122,9 @@
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="breadcrumbs__item">Моноподы для селфи</li>
+          <li class="breadcrumbs__item breadcrumbs__item--last">
+            <a class="breadcrumbs__link"> Моноподы для селфи</a>
+          </li>
         </ul>
       </div>
       <div class="catalog-columms">
@@ -133,28 +135,35 @@
             </div>
             <form
               class="catalog-filter__form"
-              action="https://echo.htmlacademy.ru"
               method="get"
+              action="https://echo.htmlacademy.ru"
             >
-              <div class="product-price catalog-filter__group">
-                <label for="range" class="product-price__title"
-                  >Стоимость</label
-                >
-                <input
-                  type="range"
-                  min="0"
-                  max="7000"
-                  step="5000"
-                  value="70"
-                  id="range"
-                />
+              <div class="catalog-filter__item catalog-filter__group">
+                <h3 class="catalog-filter__legend">Стоимость</h3>
+                <div class="catalog-filter__range">
+                  <div class="catalog-filter__controls">
+                    <div class="catalog-filter__scale">
+                      <div class="catalog-filter__bar"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price">
+                      от <input type="number" name="min-price" value="0" />
+                    </label>
+                    <label class="max-price">
+                      до <input type="number" name="max-price" value="5000" />
+                    </label>
+                  </div>
+                </div>
               </div>
               <div class="product-color catalog-filter__group">
                 <h3 class="product-color__title">Цвет</h3>
                 <ul class="product-color__list">
                   <li class="product-color__item">
                     <input
-                      class="product-color__input"
+                      class="product-color__input visually-hidden"
                       type="checkbox"
                       name="black"
                       id="black"
@@ -166,7 +175,7 @@
                   </li>
                   <li class="product-color__item">
                     <input
-                      class="product-color__input"
+                      class="product-color__input visually-hidden"
                       type="checkbox"
                       name="white"
                       id="white"
@@ -177,7 +186,7 @@
                   </li>
                   <li class="product-color__item">
                     <input
-                      class="product-color__input"
+                      class="product-color__input visually-hidden"
                       type="checkbox"
                       name="blue"
                       id="blue"
@@ -187,7 +196,7 @@
                   </li>
                   <li class="product-color__item">
                     <input
-                      class="product-color__input"
+                      class="product-color__input visually-hidden"
                       type="checkbox"
                       name="red"
                       id="red"
@@ -199,7 +208,7 @@
                   </li>
                   <li class="product-color__item">
                     <input
-                      class="product-color__input"
+                      class="product-color__input visually-hidden"
                       type="checkbox"
                       name="pink"
                       id="pink"
@@ -215,34 +224,34 @@
                 <ul class="product-functions__list">
                   <li class="product-functions__item">
                     <input
-                      class="product-functions__input"
+                      class="visually-hidden product-functions__input"
                       type="radio"
-                      name="Bluetooth
-                  availability"
+                      name="Bluetooth"
                       id="button"
                       value="yes"
                       checked
                     />
-                    <label class="product-functions__label" for="button1"
+                    <label class="product-functions__label" for="button"
                       >Есть</label
                     >
                   </li>
-                  <li>
+                  <li class="product-functions__item">
                     <input
-                      class="product-functions__input"
+                      class="visually-hidden product-functions__input"
                       type="radio"
-                      name="Bluetooth
-                  availability"
+                      name="Bluetooth"
                       value="no"
                       id="button1"
                     />
-                    <label class="product-functions__label" for="button"
+                    <label class="product-functions__label" for="button1"
                       >Нет</label
                     >
                   </li>
                 </ul>
               </div>
-              <button class="button" type="submit">Показать</button>
+              <button class="button button__filter" type="submit">
+                Показать
+              </button>
             </form>
           </section>
         </div>
@@ -279,7 +288,7 @@
           </section>
           <section class="products">
             <h2 class="visually-hidden">Продукты</h2>
-            <article class="products__one">
+            <article class="products__item">
               <h2 class="visually-hidden">Любительская селфи-палка</h2>
               <img
                 class="products__img"
@@ -292,8 +301,12 @@
                 <a class="products__link" href="#">Любительская селфи-палка</a>
                 <span class="products__price">1 100 руб.</span>
               </div>
+              <div class="products__actions">
+                <button class="button button__basket">в корзину</button>
+                <button class="button__comparison">Добавить к сравнению</button>
+              </div>
             </article>
-            <article class="products__two">
+            <article class="products__item">
               <h2 class="visually-hidden">Профессиональная селфи-палка</h2>
               <img
                 class="products__img"
@@ -310,8 +323,12 @@
                 >
                 <span class="products__price">1 500 руб.</span>
               </div>
+              <div class="products__actions">
+                <button class="button button__basket">в корзину</button>
+                <button class="button__comparison">Добавить к сравнению</button>
+              </div>
             </article>
-            <article class="products__three">
+            <article class="products__item">
               <h2 class="visually-hidden">Непотопляемая селфи-палка</h2>
               <img
                 class="products__img"
@@ -327,8 +344,12 @@
                 >
                 <span class="products__price">1 500 руб.</span>
               </div>
+              <div class="products__actions">
+                <button class="button button__basket">в корзину</button>
+                <button class="button__comparison">Добавить к сравнению</button>
+              </div>
             </article>
-            <article class="products__four">
+            <article class="products__item products__item--new">
               <h2 class="visually-hidden">Селфи-палка Следуй за мной</h2>
               <img
                 class="products__img"
@@ -343,11 +364,11 @@
                 </a>
                 <span class="products__price">1 900 руб.</span>
               </div>
+              <div class="products__actions">
+                <button class="button button__basket">в корзину</button>
+                <button class="button__comparison">Добавить к сравнению</button>
+              </div>
             </article>
-            <!-- <div class="button">
-              <button class="button button__basket">Корзина</button>
-              <button class="button__comparison">Добавить к сравнению</button>
-            </div> -->
           </section>
           <div class="pagination">
             <button class="pagination__button">Назад</button>
@@ -363,7 +384,7 @@
                 </button>
               </li>
               <li class="pagination__item">
-                <button class="pagination__number pagination__number-three">
+                <button class="pagination__number pagination__number--three">
                   3
                 </button>
               </li>
@@ -401,7 +422,7 @@
               </li>
 
               <li class="site-nav__item footer__item">
-                <a class="site-nav__link footer__link" href="#">Кредит</a>
+                <a class="site-nav__link footer__link" href="#">Контакты</a>
               </li>
             </ul>
           </section>
@@ -439,20 +460,20 @@
           </ul>
         </div>
         <div class="footer__col-right">
-          <ul class="user-nav">
-            <li class="user-nav__item">
-              <a class="user-nav__link user-nav__link--color"
+          <ul class="user-nav footer__nav footer__nav--auth">
+            <li class="user-nav__item user-nav__item--user">
+              <a class="user-nav__link user-nav__link--user"
                 >Валентин Петухов</a
               >
-              <a class="user-nav__link user-nav__link--color" href="#">Войти</a>
+              <a class="user-nav__link user-nav__link--color" href="#">Выйти</a>
             </li>
             <li class="user-nav__item">
-              <a class="user-nav__link user-nav__link--color" href="#"
+              <a class="user-nav__link user-nav__link--compare" href="#"
                 >Сравнить</a
               >
             </li>
-            <li class="user-nav__item">
-              <a class="user-nav__link user-nav__link--color" href="#"
+            <li class="user-nav__item user-nav__item--bascet">
+              <a class="user-nav__link user-nav__link--bascet" href="#"
                 >Корзина</a
               >
             </li>
