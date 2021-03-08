@@ -2,21 +2,22 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>Device магазин гаджетов</title>
   </head>
   <body class="page__body">
     <header class="header">
       <h1 class="visually-hidden">Сайт Device</h1>
       <div class="header__container">
-        <a class="page-logo header__logo">
+        <a class="page-logo header__logo" tabindex="1">
           <img
             class="page-logo__img"
             src="img/icons/icon-logo-header.svg"
             width="163"
             height="35"
-            alt="Логотип Divice"
+            alt="Логотип Device"
           />
         </a>
         <nav class="page-nav">
@@ -32,6 +33,7 @@
                 type="search"
                 id="search"
                 placeholder="Поиск по сайту"
+                aria-label="Поиск по сайту"
               />
               <button class="user-nav__button" type="submit">Найти</button>
             </form>
@@ -110,12 +112,12 @@
     </header>
     <main>
       <section class="slider">
-        <div class="container">
+        <div class="container slider__container">
           <h2 class="visually-hidden">Слайдер</h2>
-          <div class="slider__slide slider__slide--1">
+          <div class="slider__slide slider__slide--1 slider__slide--active">
             <div class="slider__col slider__col--left">
               <img
-                class="slider__img slider__img--selfi"
+                class="slider__img slider__img--1"
                 src="img/slider-1.png"
                 width="384"
                 height="486"
@@ -148,7 +150,7 @@
             </div>
           </div>
           <div class="slider__slide slider__slide--2">
-            <div class="slider__col">
+            <div class="slider__col slider__col--left">
               <img
                 class="slider__img slider__img--2"
                 src="img/slider-2.png"
@@ -157,23 +159,25 @@
                 alt="Фитнес-браслеты"
               />
             </div>
-            <div class="slider__col2">
+            <div class="slider__col slider__col--right">
               <strong class="slider__quote">Худеем правильно!</strong>
               <p class="slider__text">
                 Мотивирующие фитнес-браслеты помогут найти в себе силы<br />
                 не пропускать занятия и соблюдать диету.
               </p>
               <a class="button slider__button" href="#">Подробнее</a>
-              <ul class="slider__list">
-                <li class="slider__item">48 часов</li>
-                <li class="slider__item slider__item-properties">
-                  Без подзарядки
-                </li>
-              </ul>
+              <table class="slider__table">
+                <tr class="slider__table-row">
+                  <th class="slider__table-heading">48 часов</th>
+                </tr>
+                <tr class="slider__table-row">
+                  <td class="slider__table-cell">Без подзарядки</td>
+                </tr>
+              </table>
             </div>
           </div>
           <div class="slider__slide slider__slide--3">
-            <div class="slider__col">
+            <div class="slider__col slider__col--left">
               <img
                 class="slider__img slider__img--3"
                 src="img/slider-3.png"
@@ -183,7 +187,7 @@
               />
             </div>
 
-            <div class="slider__col">
+            <div class="slider__col slider__col--right">
               <strong class="slider__quote"
                 >Порхает как бабочка, жалит как пчела!
               </strong>
@@ -192,17 +196,26 @@
                 мощным лазером, замаскированным под стандартную камеру.
               </p>
               <a class="button slider__button" href="#">Подробнее</a>
-              <ul class="slider__list">
-                <li class="slider__item">800 м</li>
-                <li class="slider__item">50 м</li>
-                <li class="slider__item slider__item-properties">
-                  Дальность полета
-                </li>
-                <li class="slider__item slider__item-properties">
-                  Радиус поражения
-                </li>
-              </ul>
+              <table class="slider__table">
+                <tr class="slider__table-row">
+                  <th class="slider__table-heading">800 м</th>
+                  <th class="slider__table-heading">50 м</th>
+                </tr>
+                <tr class="slider__table-row">
+                  <td class="slider__table-cell">Дальность полета</td>
+                  <td class="slider__table-cell">Радиус поражения</td>
+                </tr>
+              </table>
             </div>
+          </div>
+          <div class="slider__controls">
+            <div
+              class="slider__bullet slider__bullet--active"
+              tabindex="0"
+              data-number="0"
+            ></div>
+            <div class="slider__bullet" tabindex="0" data-number="1"></div>
+            <div class="slider__bullet" tabindex="0" data-number="2"></div>
           </div>
         </div>
       </section>
@@ -298,32 +311,58 @@
       <section class="service">
         <div class="container service__container">
           <div class="service__col-left">
-            <button class="button service__button service__button--active">
+            <button
+              class="button service__button service__button--active"
+              title="Первый слайд"
+              data-number="0"
+            >
               Доставка
             </button>
-            <button class="button service__button">Гарантия</button>
-            <button class="button service__button">Кредит</button>
+            <button
+              class="button service__button"
+              title="Второй слайд"
+              data-number="1"
+            >
+              Гарантия
+            </button>
+            <button
+              class="button service__button"
+              title="Третий слайд"
+              data-number="2"
+            >
+              Кредит
+            </button>
           </div>
           <div class="service__col-right">
-            <h2 class="service__tittle service__tittle--delivery">Доставка</h2>
-            <p class="service__text">
-              Мы с удовольствием доставим ваш товар прямо к вашему<br />
-              подъезду совершенно бесплатно! Ведь мы неплохо<br />
-              заработаем, поднимая его на ваш этаж.
-            </p>
-            <!-- <h2 class="service__tittle">Гарантия</h2>
-            <p class="service__text">
-              Если из-за возгорания купленного у нас товара у вас сгорит дом
-              —<br />
-              не переживайте, мы выдадим вам новый.<br />
-              Товар, не дом, конечно же.
-            </p>
-            <h2 class="service__tittle">Кредит</h2>
-            <p class="service__text">
-              Залезть в долговую яму стало проще! Кредитные консультанты<br />
-              подберут для вас наиболее выгодные<br />
-              условия кредита. Выгодные для нашего банка, разумеется.
-            </p> -->
+            <div
+              class="service__slide service__slide--1 service__slide--active"
+            >
+              <h2 class="service__tittle service__tittle--delivery">
+                Доставка
+              </h2>
+              <p class="service__text">
+                Мы с удовольствием доставим ваш товар прямо к вашему<br />
+                подъезду совершенно бесплатно! Ведь мы неплохо<br />
+                заработаем, поднимая его на ваш этаж.
+              </p>
+            </div>
+            <div class="service__slide service__slide--2">
+              <h2 class="service__tittle">Гарантия</h2>
+              <p class="service__text">
+                Если из-за возгорания купленного у нас товара у вас сгорит дом
+                —<br />
+                не переживайте, мы выдадим вам новый.<br />
+                Товар, не дом, конечно же.
+              </p>
+            </div>
+            <div class="service__slide service__slide--3">
+              <h2 class="service__tittle">Кредит</h2>
+              <p class="service__text">
+                Залезть в долговую яму стало проще! Кредитные консультанты<br />
+                подберут для вас наиболее выгодные<br />
+                условия кредита. Выгодные для нашего банка, разумеется.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -336,7 +375,7 @@
               src="img/logo-1.png"
               width="260"
               height="100"
-              alt="Производитель"
+              alt="Логотип DJI"
           /></a>
           <a class="logotypes__link" href="#"
             ><img
@@ -344,7 +383,7 @@
               src="img/logo-2.png"
               width="260"
               height="100"
-              alt="Производитель"
+              alt="Логотип SP Gadgets"
           /></a>
           <a class="logotypes__link" href="#"
             ><img
@@ -352,7 +391,7 @@
               src="img/logo-3.png"
               width="260"
               height="100"
-              alt="Производитель"
+              alt="Логотип GoPro"
           /></a>
           <a class="logotypes__link" href="#"
             ><img
@@ -360,7 +399,7 @@
               src="img/logo-4.png"
               width="260"
               height="100"
-              alt="Производитель"
+              alt="Логотип Vive"
           /></a>
         </div>
       </section>
@@ -390,51 +429,75 @@
             сможете<br />
             проверить работоспособность покупки. Всякое бывает.
           </p>
+
           <a
             class="contacts__map"
-            href="#"
+            href="map.html"
             aria-label="Магазин находится по адресу: г. Москва, ул. Строителей, 15"
           >
             <img src="img/map.jpg" width="560" height="222" alt="Карта"
           /></a>
-          <a href="#" class="button contacts__button">напишите нам</a>
+
+          <a href="writeus.html" class="button contacts__button"
+            >напишите нам</a
+          >
         </section>
       </div>
     </main>
 
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__col-left">
-          <a class="footer__link" href="index.html">
+        <div class="footer__row footer__row--top">
+          <a class="footer__logo" href="index.html">
             <img
-              class="footer__logo"
+              class="footer__img"
               src="img/icons/icon-logo-footer.svg"
               width="163"
               height="35"
-              alt="Логотип Divice"
+              alt="Логотип Device"
             />
           </a>
+          <ul class="user-nav footer__nav">
+            <li class="user-nav__item footer__item">
+              <a class="user-nav__link user-nav__link--user" href="#">Войти</a>
+            </li>
+            <li class="user-nav__item footer__item">
+              <a class="user-nav__link user-nav__link--compare" href="#"
+                >Сравнить</a
+              >
+            </li>
+            <li class="user-nav__item footer__item">
+              <a class="user-nav__link user-nav__link--bascet" href="#"
+                >Корзина</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__row footer__row--center">
           <address class="footer__address">
             г. Москва, ул. Строителей, 15
           </address>
-        </div>
-        <div class="footer__col-center">
-          <section class="site-nav">
+          <section class="site-nav footer__nav">
             <h2 class="visually-hidden">Навигация</h2>
             <ul class="site-nav__list footer__list">
-              <li class="site-nav__item footer__item">
+              <li class="site-nav__item">
                 <a class="site-nav__link footer__link" href="#">Доставка</a>
               </li>
-              <li class="site-nav__item footer__item">
+              <li class="site-nav__item">
                 <a class="site-nav__link footer__link" href="#">Гарантия</a>
               </li>
 
-              <li class="site-nav__item footer__item">
+              <li class="site-nav__item">
                 <a class="site-nav__link footer__link" href="#">Контакты</a>
               </li>
             </ul>
           </section>
-          <ul class="social">
+          <a class="footer__phone" href="tel:+74954959595"
+            >Тел.: +7 (495) 495-95-95</a
+          >
+        </div>
+        <div class="footer__row footer__row--bottom">
+          <ul class="social footer__social">
             <li class="social__item">
               <a class="social__link" href="#">
                 <img
@@ -466,24 +529,6 @@
               </a>
             </li>
           </ul>
-        </div>
-        <div class="footer__col-right">
-          <ul class="user-nav footer__nav">
-            <li class="user-nav__item">
-              <a class="user-nav__link user-nav__link--user" href="#">Войти</a>
-            </li>
-            <li class="user-nav__item">
-              <a class="user-nav__link user-nav__link--compare" href="#"
-                >Сравнить</a
-              >
-            </li>
-            <li class="user-nav__item">
-              <a class="user-nav__link user-nav__link--bascet" href="#"
-                >Корзина</a
-              >
-            </li>
-          </ul>
-          <a class="phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
           <a
             class="footer__icon"
             href="https://htmlacademy.ru/intensive/htmlcss"
@@ -498,6 +543,7 @@
         </div>
       </div>
     </footer>
+
     <section class="feedback">
       <h2 class="visually-hidden">Напишите нам</h2>
 
@@ -546,5 +592,19 @@
       </form>
       <button class="button-close feedback__close" type="button"></button>
     </section>
+    <section class="map">
+      <h2 class="visually-hidden">Карта</h2>
+      <iframe
+        class="map__interactive"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.5274272859175!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1613976573897!5m2!1sru!2sru"
+        width="994"
+        height="593"
+        allowfullscreen=""
+        loading="lazy"
+        title="Магазин находится по адресу: г. Москва, ул. Строителей, 15"
+      ></iframe>
+      <button class="button-close map__close" type="button"></button>
+    </section>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
