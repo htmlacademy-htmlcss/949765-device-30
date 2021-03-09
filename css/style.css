@@ -101,12 +101,12 @@ a {
 }
 
 .visually-hidden {
-  position: absolute !important;
+  position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
 }
 
@@ -321,7 +321,7 @@ a {
   margin-right: 40px;
 }
 
-.user-nav__item--bascet {
+.user-nav__item--basket {
   margin-left: 40px;
 }
 
@@ -404,7 +404,7 @@ a {
   background: url(../img/icons/icon-compare.svg);
 }
 
-.user-nav__link--bascet::before {
+.user-nav__link--basket::before {
   left: 3px;
 
   width: 10px;
@@ -698,7 +698,7 @@ a {
 
   border: 1px solid var(--basic-black-color);
   border-radius: 50%;
-  background: transparent;
+  background: var(--transparent-color);
 
   cursor: pointer;
 }
@@ -1231,7 +1231,7 @@ a {
   background-image: url(../img/icons/icon-exit-footer.svg);
 }
 
-.footer .user-nav__link--bascet::before {
+.footer .user-nav__link--basket::before {
   position: absolute;
   content: "";
 
@@ -1450,7 +1450,7 @@ a {
   color: var(--basic-black-color);
 }
 
-.catalog-columms {
+.catalog-columns {
   display: flex;
   margin-top: 50px;
 }
@@ -2082,7 +2082,7 @@ a {
   color: var(--basic-black-color);
 
   border: none;
-  background-color: Transparent;
+  background-color: var(--transparent-color);
 
   cursor: pointer;
 }
